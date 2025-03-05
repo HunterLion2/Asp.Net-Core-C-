@@ -1,0 +1,14 @@
+C:\Users\cozgu\Documents\Asp.Net-Core C#\bin\Debug\net9.0\Asp.Net-Core C#.exe
+C:\Users\cozgu\Documents\Asp.Net-Core C#\bin\Debug\net9.0\Asp.Net-Core C#.deps.json
+C:\Users\cozgu\Documents\Asp.Net-Core C#\bin\Debug\net9.0\Asp.Net-Core C#.runtimeconfig.json
+C:\Users\cozgu\Documents\Asp.Net-Core C#\bin\Debug\net9.0\Asp.Net-Core C#.dll
+C:\Users\cozgu\Documents\Asp.Net-Core C#\bin\Debug\net9.0\Asp.Net-Core C#.pdb
+C:\Users\cozgu\Documents\Asp.Net-Core C#\obj\Debug\net9.0\Asp.Net-Core C#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cozgu\Documents\Asp.Net-Core C#\obj\Debug\net9.0\Asp.Net-Core C#.AssemblyInfoInputs.cache
+C:\Users\cozgu\Documents\Asp.Net-Core C#\obj\Debug\net9.0\Asp.Net-Core C#.AssemblyInfo.cs
+C:\Users\cozgu\Documents\Asp.Net-Core C#\obj\Debug\net9.0\Asp.Net-Core C#.csproj.CoreCompileInputs.cache
+C:\Users\cozgu\Documents\Asp.Net-Core C#\obj\Debug\net9.0\Asp.Net-Core C#.dll
+C:\Users\cozgu\Documents\Asp.Net-Core C#\obj\Debug\net9.0\refint\Asp.Net-Core C#.dll
+C:\Users\cozgu\Documents\Asp.Net-Core C#\obj\Debug\net9.0\Asp.Net-Core C#.pdb
+C:\Users\cozgu\Documents\Asp.Net-Core C#\obj\Debug\net9.0\Asp.Net-Core C#.genruntimeconfig.cache
+C:\Users\cozgu\Documents\Asp.Net-Core C#\obj\Debug\net9.0\ref\Asp.Net-Core C#.dll
