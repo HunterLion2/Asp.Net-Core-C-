@@ -36,7 +36,7 @@ int sayi1 = int.Parse(Console.ReadLine()); // Buradaki int.Parse() olayı ise Co
 Console.Write("2.sayı: ");
 int sayi2 = int.Parse(Console.ReadLine());
 
-int toplam = sayi2;
+int toplam = sayi2 + sayi1;
 Console.WriteLine($"Girilen Toplam Değer: {toplam}"); // $ işaretini kullanmazsal o zaman içerisine int değerini yazamazdık.
 
 
