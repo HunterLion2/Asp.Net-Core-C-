@@ -193,18 +193,62 @@ namespace ConsoleApp
 
             //                                             --------------- UYGULAMA ------------------
 
-            int j = 2, v = 5, t = 10;
-            int say1 = 0;
+            // int x = 2, y = 5, z = 10;
 
-            // a)
+            // int degerler_toplamı = x + y + z;
 
-            Console.WriteLine($"Rastgele Sayı: {say1}");
+            // Console.Write("Sayi1: ");
+            // int say1 = int.Parse(Console.ReadLine());
+
+            // Console.Write("Sayi2: ");
+            // int say2 = int.Parse(Console.ReadLine());
+
+            // int kullanıcı_carpım = say1 * say2;
+
+            // int ıslem = kullanıcı_carpım - degerler_toplamı;
+
+            // Console.WriteLine($"Cikarmasi:{ıslem}");
+
+            // Console.Write("Tek-Cift: ");
+            // int tekcıft = int.Parse(Console.ReadLine());
+
+            // Burada if else kullanmadan "? :" yapısını kullanmış olduk. 
+            // string sonuc = (tekcıft % 2 == 0 ? "Evet" : "Hayır");
+
+            // Console.WriteLine($"Girilen Deger Cift Mi => {sonuc}");
+
+            // var uzeri = Math.Pow(y, x);
+            // Console.WriteLine($"Y Uzeri X Degeri => {uzeri}");
 
 
-            // 3- Karşılaştırma Operatörleri (==,!=,<,>,<=,>=,?:)
 
-            // 4- Mantıksal Operatörler (&&,||,!)
 
+            // 3) Karşılaştırma Operatörleri (==,!=,=>,=<,?:)
+
+            int aa = 5, bb = 5, cc = 10, dd = 4;
+            string username = "ÇınarÖzgürgil";
+            string password = "123456";
+
+            var result = ( a == b ); // true
+            //result = (a == c); // false değeri döner
+            //result = (username == "Çnaz");
+
+            // 4) Mantıksal Operatörler (&&, || , !)
+
+            int xx = 6;
+            int hak = 5;
+            char devami = 'e';
+
+            // and (&&) [Girilen iki değerinde doğru ise doğru yanlış ise yanlış olması gerekir başka türlü olmaz]
+            // true && true => true
+            // false && true => false
+
+            // or(||)
+            // true || true
+            // false || true
+            // false || false
+
+            
 
         }
     }
