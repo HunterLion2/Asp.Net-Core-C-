@@ -229,7 +229,7 @@ namespace ConsoleApp
             string username = "ÇınarÖzgürgil";
             string password = "123456";
 
-            var result = ( a == b ); // true
+            var result = (a == b); // true
             //result = (a == c); // false değeri döner
             //result = (username == "Çnaz");
 
@@ -248,7 +248,25 @@ namespace ConsoleApp
             // false || true
             // false || false
 
-            
+            //                                   --------------------------- Switch-Case -----------------------------
+
+            // switch(say1) {
+            //     case(10): // Aslında switch case if else'e çok benzer switch alınan değerdir case de bu değerin alacağı değerleri yazdığımız yerdir default da else'e benzer yukarıdakiler olmaz sa şunu yap der. 
+            //         Console.WriteLine("Kış Mevsimi");
+            //     default: 
+            //         Console.WriteLine("Kış Mevsimi Değil");
+            // }
+
+            // switch (say1)
+            // {
+            //     // 10 11 12 değerleri için aşşağıdaki olayı yap anlamına gelir
+            //     case (12):
+            //     case (11):
+            //     case (10): // Aslında switch case if else'e çok benzer switch alınan değerdir case de bu değerin alacağı değerleri yazdığımız yerdir default da else'e benzer yukarıdakiler olmaz sa şunu yap der. 
+            //         Console.WriteLine("Kış Mevsimi");
+            //     default:
+            //         Console.WriteLine("Kış Mevsimi Değil");
+            // }
 
         }
     }
