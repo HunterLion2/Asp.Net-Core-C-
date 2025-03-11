@@ -268,6 +268,47 @@ namespace ConsoleApp
             //         Console.WriteLine("Kış Mevsimi Değil");
             // }
 
+            //                                   --------------------------------- For -----------------------------------
+
+            // 1) ----
+
+            // Console.Write("Başlangıç: ");
+            // int baslangıc = int.Parse(Console.ReadLine());
+
+            // Console.Write("Artış-Mıktarı: ");
+            // int artıs = int.Parse(Console.ReadLine());
+
+            // Console.Write("Bitis: ");
+            // int bıtıs = int.Parse(Console.ReadLine());
+
+
+            // for(int basla = baslangıc; basla <= bıtıs; basla=basla + artıs) {
+            //     Console.WriteLine(basla);
+            // }
+
+
+            // 2) ----------
+
+            // int[] sayilar = {1,3,5,6,7,23,67,90};
+
+            // for(int i = 0; i < sayilar.Length; i++) {
+            //     if(sayilar[i] % 3 == 0) {
+            //         Console.WriteLine(sayilar[i]);
+            //     }
+            // }
+
+            // 3) ---------------------
+
+            // int[] sayilar = { 1, 3, 5, 6, 7, 23, 67, 90 };
+            // int toplam = 0;
+
+            // Burada aslında i değerini sayilar'ın içindeki en büyük değere kadar yazdırıp sonrada i'nin içinden sayilar'da olan rakamı almış olduk.
+            // for (int i = 0; i < sayilar.Length; i++)
+            // {
+            //     toplam += sayilar[i];
+            // }
+            // Console.WriteLine("Toplam: " + toplam);
+
         }
     }
 }
