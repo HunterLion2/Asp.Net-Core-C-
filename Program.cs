@@ -309,6 +309,50 @@ namespace ConsoleApp
             // }
             // Console.WriteLine("Toplam: " + toplam);
 
+
+            //                          ------------------ FOREACH() ----------------
+
+
+            // string[] arabalar = { "Opel", "Mazda", "Toyota", "Bmw", "Mercedes" };
+
+            // foreach (string araba in arabalar)
+            // {
+            //     if (araba.Length >= 5)
+            //     {
+            //         Console.WriteLine(araba);
+            //     }
+            // }
+
+            //              ------------------------------ WHİLE() -------------------------------
+
+            // For'un aynısıdır fakat bunda ilk değer dışarıda son değeride içeriye yazılır
+
+            // int i = 0;
+            // while (i < 10)
+            // {
+            //     Console.WriteLine(i);
+            //     i++;
+            // }
+
+            //          ------------------------------- Break And Continue ----------------------------------
+
+            // Break - Continue Kullanımı: 
+
+            // For döngülerinde sürecin devam edip etmeme olayını kontrol etmemizi sağlar.
+
+            // string name = "Çınar Özgürgil";
+
+            // for (int i = 0; i < name.Length; i++)
+            // {
+            //     if (name[i] == 'd')
+            //     {
+            //         continue;
+            //         Console.WriteLine(name[i]);
+            //     }
+            // }
+
+            // Console.WriteLine("döngü dışı");
+
         }
     }
 }
