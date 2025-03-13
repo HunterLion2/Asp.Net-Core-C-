@@ -1,10 +1,8 @@
-using System;
 
+// class StringMethod {
 
-class StringMethod {
-
-    static void Main(string[] args) {
-        string msg = "Hello There. My name is Çınar Özgürgil.";
+    // static void Main(string[] args) {
+        // string msg = "Hello There. My name is Çınar Özgürgil.";
 
         // Console.WriteLine(msg.Length); length yazılan değerin uzunluğunu belirtir.
         // Console.WriteLine(msg.ToLower()); ToLower() bütün cümleyi küçük harf yapar.
@@ -24,5 +22,5 @@ class StringMethod {
         // Console.WriteLine(msg.Insert(0, "...")); Burada 0. değere ... değerini ekler.} 
         // Console.WriteLine(msg.Remove(5)); 5. indexden itibaren siler
         // Console.WriteLine(msg.Remove(5,10)); 5. indexden 10. indexe kadar siler
-    }
-}
+    // }
+// }

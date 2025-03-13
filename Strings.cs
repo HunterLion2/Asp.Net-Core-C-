@@ -1,11 +1,11 @@
 
 
-class String {
+// class String {
 
     
-    string name = Console.ReadLine();
-    string surname = "Özgürgil";
-    int age = 18;
+    // string name = Console.ReadLine();
+    // string surname = "Özgürgil";
+    // int age = 18;
 
     // string str = "My name is" + name + "" + surname + "I'm " + age + " years old";
 
@@ -16,5 +16,5 @@ class String {
     // Bu şekilde de yapılabilir aynı şeydir.
     // string str = "$ My name is {name} {surname} and I'm {age} years old.";
 
-}
+// }
 
