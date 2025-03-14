@@ -224,3 +224,21 @@
     //         Console.WriteLine(islem.Toplama(10,20)); 
     //         Console.WriteLine(islem.Toplama(10,20,30)); 
     //         Console.WriteLine(islem.Toplama(10,20,30,40)); 
+
+// ------------------------------------------------ Function() Aşırı Yükleme Mantığı -----------------------------------------------------------
+
+        // Bu şekilde bir function'un birden fazla halde metodu olanları yazılırsa biz bu function'lardan istediğimizi seçip çalışabiliriz.
+
+        // public int Toplama(int a, int b)
+        // {
+        //     return a + b;
+        // }
+        // public int Toplama(int a, int b, int c)
+        // {
+        //     return a + b + c;
+        // }
+
+        // public int Toplama(int a, int b, int c, int d)
+        // {
+        //     return a + b + c + d;
+        // }
