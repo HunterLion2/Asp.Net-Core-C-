@@ -537,6 +537,109 @@
     //     }
     // }
 
+
+// ------------------------------------- Yapıcı Metodlar(Constructor) -----------------------------------------
+
+//    class Araba
+//     {        
+//         // Bu şekilde class'ın adını vererek bir constructor oluştururuz.
+//         public Araba()
+//         {
+//             this.MaxHiz = 180;
+//             Console.WriteLine("yapıcı metot çalıştırıldı.");
+//         }
+//         public Araba(int maxhiz)
+//         {
+//             this.MaxHiz = maxhiz;
+//         }
+
+//         public Araba(string marka,string model,string renk,bool otomatik,int maxhiz)
+//         {
+//             this.Marka = marka;
+//             this.Model = model;
+//             this.Renk = renk;
+//             this.Otomatik = otomatik;
+//             this.MaxHiz = maxhiz;
+//         }
+
+           // Burada ki get ve set in anlamı şudur get değerin okunabilir olucağı anlamına gelir set ise değerin değiştirilebilir olucağı anlamına gelir.
+//         public string Marka { get; set; }
+//         public string Model { get; set; }
+//         public string Renk { get; set; }
+//         public bool Otomatik { get; set; }
+//         public int MaxHiz { get; set; }
+//     }
+
+
+// -------------------------------------------------- Proporties --------------------------------------------------------------
+
+// namespace ConsoleApp {
+
+//     class Product {
+//         // Eğer Buradaki değerlere public yazmazsam bu class'ın dışında buradaki değerlere erişemem.
+//         private string _name;
+
+//         public string Name {
+//             get {
+//                 return _name; 
+//             } set { // Burası _name değerine bir atama yapmak istediği zaman çıkıcak koşullardır.
+//                 if(!string.IsNullOrEmpty(value)) {
+//                     _name = value;
+//                 } else {
+//                     // Console.WriteLine("Name alanı boş geçilemez");
+
+//                     // Burada throw bir fırlatma dır Exception ise hata fırlatmat için kullanılır
+//                     throw new Exception("Name alanı zorunlu");
+//                 }
+//             }
+//         }
+
+//         // Buraya private vererek buradaki değeri dışarıdan değiştirilemez kılarız ve bu değeri de kendi class'ının içerisinde bir function ile erişerek bu fonksiyonu başka bir class içerisinde çağırdığımız zaman bunu erişilebilir kılarız.
+//         // Burada fonksüyon çağırma ile bunu yapmak yerine proporties ile de bu yapılabilir.
+
+//         private double _price;
+
+//         public double Price {
+//             get { // Burada private olan öge return edilir.
+//                 return _price;
+//             }
+//             set { // Burada da private olan değerin içerisine değerler atıyabiliyoruz. value değeri set edilen değer anlamına gelir.
+//                 if(value < 0) {
+//                     _price = 0;
+//                 } else {
+//                     _price = value;
+//                 }
+//             }
+//         }
+
+
+
+//         // public void SetPrice(double price) {
+//         //     if(price < 0) {
+//         //         this.Price = 0;
+//         //     } else {
+//         //         this.Price = price;
+//         //     }
+//         // }
+
+//     }
+
+//     class Program {
+
+//         static void Main(string[] args) {
+//             var p = new Product();
+//             p.Name = "Samsung S8";
+//             // p.SetPrice(2000);
+//             p.Price = -2000;
+
+//             Console.WriteLine(p.Price);
+//         }
+//     }
+// }
+
+
+
+
 //         }
 //     }
 // }
