@@ -325,88 +325,190 @@
 
 // ---------------------------------------------------------------- Genel Uygulama ---------------------------------------------------------------------------
 
-    class Question
-    {
-        public Question(string text, string[] choices, string answer)
-        {
-            this.Text = text;
-            this.Choices = choices;
-            this.Answer = answer;
-        }
-        public string Text { get; set; }
-        public string[] Choices { get; set; }
-        public string Answer { get; set; }
+    // class Question
+    // {
+    //     public Question(string text, string[] choices, string answer)
+    //     {
+    //         this.Text = text;
+    //         this.Choices = choices;
+    //         this.Answer = answer;
+    //     }
+    //     public string Text { get; set; }
+    //     public string[] Choices { get; set; }
+    //     public string Answer { get; set; }
 
-        public bool checkAnswer(string answer)
+    //     public bool checkAnswer(string answer)
+    //     {
+    //         return this.Answer.ToLower() == answer.ToLower();
+    //     }
+    // }
+
+    // class Quiz
+    // {
+    //     public Quiz(Question[] questions)
+    //     {
+    //         this.Questions = questions;
+    //         this.QuestionIndex = 0;
+    //         this.Score = 0;
+    //     }
+    //     private Question[] Questions { get; set; }
+    //     private int QuestionIndex { get; set; }
+    //     private int Score { get; set; }
+
+    //     private Question GetQuestion()
+    //     {
+    //         return this.Questions[this.QuestionIndex];
+    //     }
+
+    //     public void DisplayQuestion()
+    //     {
+    //         var question = this.GetQuestion();
+    //         this.DisplayProgress();
+    //         Console.WriteLine($"soru {this.QuestionIndex + 1}: {question.Text}");
+
+    //         foreach (var c in question.Choices)
+    //         {
+    //             Console.WriteLine($"-{c}");
+    //         }
+
+    //         Console.Write("cevap: ");
+    //         var cevap = Console.ReadLine();
+    //         this.Guess(cevap);
+    //     }
+
+    //     private void Guess(string answer)
+    //     {
+    //         var question = this.GetQuestion();
+    //         if (question.checkAnswer(answer))
+    //             this.Score++;
+    //         this.QuestionIndex++;
+
+    //         if (this.Questions.Length == this.QuestionIndex)
+    //         {
+    //             this.DisplayScore();
+    //         }
+    //         else
+    //         {                
+    //             this.DisplayQuestion();
+    //         }
+
+    //     }
+    //     private void DisplayScore()
+    //     {
+    //         Console.WriteLine($"Score: {this.Score}");
+    //     }
+
+    //     private void DisplayProgress()
+    //     {
+    //         int totalQuestion = this.Questions.Length;
+    //         int questionNumber = this.QuestionIndex+1;
+
+    //         if (totalQuestion>=questionNumber)
+    //             Console.WriteLine($"Question {questionNumber} of {totalQuestion}");
+    //     }
+
+    // }
+
+    // class Program
+    // {
+    //     static void Main(string[] args)
+    //     {
+    //         // OOP: Quiz Uygulaması
+
+    //         var q1 = new Question("En iyi programlama dili hangisidir?", new string[] { "Python", "C#", "Java", "C++" }, "C#");
+    //         var q2 = new Question("En popüler programlama dili hangisidir?", new string[] { "C#", "Python", "Java", "C++" }, "C#");
+    //         var q3 = new Question("En çok kazandıran programlama dili hangisidir?", new string[] { "C#", "Java", "Python", "C++" }, "C#");
+
+    //         var questions = new Question[] { q1, q2, q3 };
+    //         var quiz = new Quiz(questions);
+
+    //         quiz.DisplayQuestion();
+
+    //     }
+    // }
+
+// --------------------------------------------------------- Static Members ------------------------------------------------------------------
+
+class Product
+    // Bu alanda saklamak istediğimiz bilgiler bulunur.
+    {
+        public int ProductId { get; set; }
+        public string ProductName { get; set; }
+        public double Price { get; set; }
+        public bool IsApproved { get; set; }
+    }
+
+    static class ProductManager
+    {
+        static Product[] Products;
+
+        static ProductManager()
         {
-            return this.Answer.ToLower() == answer.ToLower();
+            Products = new Product[5];
+
+            Products[0] = new Product { ProductId = 1, ProductName = "Iphone 5", Price = 2000, IsApproved = false };
+            Products[1] = new Product { ProductId = 2, ProductName = "Iphone 6", Price = 3000, IsApproved = false };
+            Products[2] = new Product { ProductId = 3, ProductName = "Iphone 7", Price = 4000, IsApproved = true };
+            Products[3] = new Product { ProductId = 4, ProductName = "Iphone 8", Price = 5000, IsApproved = true };
+            Products[4] = new Product { ProductId = 5, ProductName = "Iphone X", Price = 6000, IsApproved = true };
+        }
+
+        public static Product[] GetProducts()
+        {
+            return Products;
+        }
+
+        public static Product GetProductById(int id)
+        {
+            Product product = null;
+
+            foreach (var p in Products)
+            {
+                if (p.ProductId == id)
+                {
+                    product = p;
+                    break;
+                }
+            }
+
+            return product;
+        }
+
+        public static Product GetProductByName(string name) { 
+            Product product = null;
+
+            foreach (var p in Products)
+            {
+                if (p.ProductName == name){
+                    product = p;
+                    break;
+                } 
+            }
+
+            if(product == null ) {
+                Console.WriteLine("Verdiğiniz Değer Bulunmamaktadır");
+            }
+
+            return product;
         }
     }
 
-    class Quiz
-    {
-        public Quiz(Question[] questions)
-        {
-            this.Questions = questions;
-            this.QuestionIndex = 0;
-        }
-        private Question[] Questions { get; set; }
-        public int QuestionIndex { get; set; }
+    class Program {
+        static void Main(string[] args) {
+            // var product = ProductManager.GetProductById(2);
+            // Console.WriteLine($"name: {product.ProductName} price: {product.Price}");
 
-        public Question GetQuestion()
-        {
-            return this.Questions[this.QuestionIndex];
-        }
+            // var products = ProductManager.GetProducts();
+            //    foreach (var p in products)
+            //    {
+            //        Console.WriteLine($"name: {p.ProductName} price: {p.Price}");
+            //    }
 
-        public void DisplayQuestion()
-        {
-            var question = this.GetQuestion();
-            Console.WriteLine($"soru {this.QuestionIndex + 1}: {question.Text}");
+            Console.Write("Aratmak İstediğiniz Değerin Adını Giriniz: ");
+            string result = Console.ReadLine();
 
-            foreach (var c in question.Choices)
-            {
-                Console.WriteLine($"-{c}");
-            }
-
-            Console.Write("cevap: ");
-            var cevap = Console.ReadLine();
-            this.Guess(cevap);
-        }
-
-        public void Guess(string answer)
-        {
-            var question = this.GetQuestion();
-            Console.WriteLine(question.checkAnswer(answer)); // skor
-            this.QuestionIndex++;
-
-            if (this.Questions.Length == this.QuestionIndex)
-            {
-                // skor
-                return;
-            }
-            else
-            {
-                this.DisplayQuestion();
-            }
-
-        }
-
-    }
-
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            // OOP: Quiz Uygulaması
-
-            var q1 = new Question("En iyi programlama dili hangisidir?", new string[] { "Python", "C#", "Java", "C++" }, "C#");
-            var q2 = new Question("En popüler programlama dili hangisidir?", new string[] { "C#", "Python", "Java", "C++" }, "C#");
-            var q3 = new Question("En çok kazandıran programlama dili hangisidir?", new string[] { "C#", "Java", "Python", "C++" }, "C#");
-
-            var questions = new Question[] { q1, q2, q3 };
-            var quiz = new Quiz(questions);
-
-            quiz.DisplayQuestion();
+            var product = ProductManager.GetProductByName(result);
+            Console.WriteLine($"name: {product.ProductName} price: {product.Price}");
 
         }
     }
