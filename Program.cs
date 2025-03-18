@@ -707,106 +707,200 @@
 
 // Abstrack bir değer oluşturduğumuz zaman bu değerden yeni bir nesne üretemeyiz.
 
-abstract class Person
-{
-    public string Name { get; set; }
-    public string SurName { get; set; }
+// abstract class Person
+// {
+//     public string Name { get; set; }
+//     public string SurName { get; set; }
 
-    public Person(string name, string surname)
+//     public Person(string name, string surname)
+//     {
+//         this.Name = name;
+//         this.SurName = surname;
+//         Console.WriteLine("Person nesnesi oluşturuldu.");
+//     }
+
+//Burada ki virtual'ın anlamı biz her zaman buradaki Intro() içerisinde ki değerleri diğer mirasçı class larda da aynısını kullanmak zorunda değiliz 
+//buraya yazdığımız "virtual" değeri sayesinde buradaki değeri ezeriz. Ve mirasçı class'a da "override" yazarız. Bu sayede Intro()'nun içerisine yazılacak değerlerde değişiklik yapma hakkımız olur.
+
+//     public void Greeting()
+//     {
+//         Console.WriteLine("I am a person");
+//     }
+//     public abstract void Intro();
+// }
+
+// class Student : Person
+// {
+//     public string StudentNumber { get; set; }
+//     public Student(string name, string surname, string studentnumber) : base(name, surname)
+//     {
+//         this.StudentNumber = studentnumber;
+//         Console.WriteLine("Student nesnesi oluşturuldu.");
+//     }
+
+//     public override void Intro()
+//     {
+//         Console.WriteLine($"name: {this.Name} Surname: {this.SurName} Number: {this.StudentNumber}");
+//     }
+// }
+
+
+// class Teacher : Person
+// {
+//     public string Branch { get; set; }
+
+// Burada ki base() kelimesi temel anlamına gelir yani Teacher da alınan name ve surname bilgilerini ana olana gönder yani miras aldığımıza burada o kişi Person oluyor.
+
+//     public Teacher(string name, string surname, string branch) : base(name, surname)
+//     {
+//         this.Branch = branch;
+//     }
+
+//     public void Teach()
+//     {
+//         Console.WriteLine("I am teaching...");
+//     }
+
+//     public override void Intro()
+//     {
+//         Console.WriteLine($"name: {this.Name} Surname: {this.SurName} Branch: {this.Branch}");
+//     }
+// }
+
+// abstract class Shape
+// {
+//     public int Width { get; set; }
+//     public int Height { get; set; }
+
+//     public Shape(int w, int h)
+//     {
+//         this.Width = w;
+//         this.Height = h;
+//     }
+
+//     public int CalculateArea()
+//     {
+//         return this.Width * this.Height;
+//     }
+
+// Bu soyut bir methodtur yani Shape class'ı her çağrıldığında çağrılan yerde bu method ile ilgili 
+//     public abstract void Draw();
+// }
+
+// class Square: Shape
+// {
+
+//     public Square(int w, int h):base(w,h)
+//     {        
+//     }
+//     public override void Draw()
+//     {
+//         Console.WriteLine("Draw a square");
+//     }
+// }
+
+// class Rectangle: Shape
+// {
+//     public Rectangle(int w, int h):base(w,h) {
+
+//     }
+//     public override void Draw()
+//     {
+//         Console.WriteLine("Draw a rectangle");
+//     }
+// }
+
+// class Program
+// {
+//     static void Main(string[] args)
+//     {           
+//         // Abstract Class: Soyut Sınıf      
+
+//         var shapes = new Shape[3];
+
+//         shapes[0] = new Rectangle(10,15);
+//         shapes[1] = new Square(15,15);
+//         shapes[2] = new Rectangle(15,20);
+
+//         foreach (var shape in shapes)
+//         {
+//             shape.Draw();
+//             Console.WriteLine($"alan: {shape.CalculateArea()}");
+//         }
+
+//     }
+// }
+
+
+// ----------------------------------------------------------------------- Interface --------------------------------------------------------------------------------
+
+// İnterface'ler (arayüz) genellikle "I" harfi ile başlar.
+// İnterface'e bir constructor eklenemez.
+
+    interface IKisi
     {
-        this.Name = name;
-        this.SurName = surname;
-        Console.WriteLine("Person nesnesi oluşturuldu.");
+        string adSoyad {get;set;}
+        string adres {get;set;}
+        string departman { get; set; }
+        double maas { get; set; }
+        
+    }
+    interface IPersonel
+    {       
+        string departman { get; set; }
+        void bilgi();
+
     }
 
-    //Burada ki virtual'ın anlamı biz her zaman buradaki Intro() içerisinde ki değerleri diğer mirasçı class larda da aynısını kullanmak zorunda değiliz 
-    //buraya yazdığımız "virtual" değeri sayesinde buradaki değeri ezeriz. Ve mirasçı class'a da "override" yazarız. Bu sayede Intro()'nun içerisine yazılacak değerlerde değişiklik yapma hakkımız olur.
-
-    public void Greeting()
+    class Yonetici : IPersonel,IKisi
     {
-        Console.WriteLine("I am a person");
-    }
-    public abstract void Intro();
-}
-
-class Student : Person
-{
-    public string StudentNumber { get; set; }
-    public Student(string name, string surname, string studentnumber) : base(name, surname)
-    {
-        this.StudentNumber = studentnumber;
-        Console.WriteLine("Student nesnesi oluşturuldu.");
-    }
-
-    public override void Intro()
-    {
-        Console.WriteLine($"name: {this.Name} Surname: {this.SurName} Number: {this.StudentNumber}");
-    }
-}
-
-
-class Teacher : Person
-{
-    public string Branch { get; set; }
-    
-    // Burada ki base() kelimesi temel anlamına gelir yani Teacher da alınan name ve surname bilgilerini ana olana gönder yani miras aldığımıza burada o kişi Person oluyor.
-
-    public Teacher(string name, string surname, string branch) : base(name, surname)
-    {
-        this.Branch = branch;
-    }
-
-    public void Teach()
-    {
-        Console.WriteLine("I am teaching...");
-    }
-
-    public override void Intro()
-    {
-        Console.WriteLine($"name: {this.Name} Surname: {this.SurName} Branch: {this.Branch}");
-    }
-}
-
-abstract class Shape
-{
-    public int Width { get; set; }
-    public int Height { get; set; }
-
-    public Shape(int w, int h)
-    {
-        this.Width = w;
-        this.Height = h;
-    }
-
-    public int CalculateArea()
-    {
-        return this.Width * this.Height;
-    }
-
-    // Bu soyut bir methodtur yani Shape class'ı her çağrıldığında çağrılan yerde bu method ile ilgili 
-    public abstract void Draw();
-}
-
-    class Square: Shape
-    {
-
-        public Square(int w, int h):base(w,h)
-        {        
-        }
-        public override void Draw()
+        public Yonetici(string _adsoyad,string _adres,string _departman)
         {
-            Console.WriteLine("Draw a square");
+            this.adSoyad = _adsoyad;
+            this.adres = _adres;
+            this.departman =_departman;
+        }
+        public string adSoyad { get; set; }
+        public string adres { get; set; }
+        public string departman { get; set; }
+        public double maas{ get; set; }
+
+        public void bilgi()
+        {
+            Console.WriteLine($"{this.adSoyad} isimli personel {this.departman} bölümünde yöneticidir.");
         }
     }
 
-    class Rectangle: Shape
+    class Isci: IPersonel,IKisi
     {
-        public Rectangle(int w, int h):base(w,h) {
-                
-        }
-        public override void Draw()
+        public Isci(string _adsoyad,string _adres,string _departman)
         {
-            Console.WriteLine("Draw a rectangle");
+            this.adSoyad = _adsoyad;
+            this.adres = _adres;
+            this.departman =_departman;
+        }
+        public string adSoyad { get; set; }
+        public string adres { get; set; }
+        public string departman { get; set; }
+        public double maas { get; set; }
+
+        public void bilgi()
+        {
+            Console.WriteLine($"{this.adSoyad} isimli personel {this.departman} bölümünde işçidir.");
+        }
+    }
+
+        class Robot : IPersonel
+    {
+        public Robot(string _departman)
+        {
+            this.departman = _departman;
+        }
+        public string departman { get; set; }
+
+        public void bilgi()
+        {
+            Console.WriteLine($"{this.departman} bölümünde bir robot.");            
         }
     }
 
@@ -814,23 +908,24 @@ abstract class Shape
     {
         static void Main(string[] args)
         {           
-            // Abstract Class: Soyut Sınıf      
+           // Interface
 
-            var shapes = new Shape[3];
+            // IPersonel y = new Yonetici();
+            // IPersonel i = new Isci();
 
-            shapes[0] = new Rectangle(10,15);
-            shapes[1] = new Square(15,15);
-            shapes[2] = new Rectangle(15,20);
+            var personeller = new IPersonel[3];
 
-            foreach (var shape in shapes)
+            personeller[0] = new Yonetici("ali yılmaz","istanbul","finans");
+            personeller[1] = new Isci("ahmet cengiz","kocaeli","üretim");
+            personeller[2] = new Robot("üretim");
+
+            foreach (var personel in personeller)
             {
-                shape.Draw();
-                Console.WriteLine($"alan: {shape.CalculateArea()}");
+                personel.bilgi();
             }
 
         }
     }
-
 
 
 
