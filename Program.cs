@@ -923,9 +923,81 @@
 //         {
 //             personel.bilgi();
 //         }
-
 //     }
 // }
+
+// -------------------------------------------------------------------------- Array List -------------------------------------------------------------------------------
+
+// using System.Collections;
+
+// class Program
+//     {
+//         static void Main(string[] args)
+//         {           
+//             // ArrayList
+            
+//             ArrayList myList = new ArrayList();
+
+//             myList.Add(10);
+//             myList.Add("10");
+//             myList.Add("abc");
+//             myList.Add(10.5);
+
+//             // Add metodu ile listeye eleman en sondan eklenir.
+
+//             IList myList2 = new ArrayList(){"******","10","abc",10.5};
+
+//             // IList , ArrayList den daha kısıtlayıcı bir listeleme yapısıdır.
+
+//             // Accessing Items
+//             // Console.WriteLine(myList[0]);
+//             int sayi = (int)myList[0];
+
+//             // myList.Insert(1,20);
+
+//             // Insert metodu ile istediğimiz indexe istediğimiz değeri atıyabiliriz.
+//             // (1,20) burada ilk girilen değer index değerini 2. girilen değer indexe verilicek değerdir.
+
+//             // myList.InsertRange(3,myList2);
+
+//             // ** liste içine liste ekleneceği zaman InsertRange kullanılır burada olduğu gibi.
+
+
+//             // Remove Items
+
+//             // myList.Remove(10);  // 10 değerine sahip olan elemanı siler.
+//             // myList.RemoveAt(2); // Silmek istediğimiz index değerini girip onu silebiliriz.
+//             // myList.RemoveRange(0,2); // Burada da 0. indexten başla 2.ye kadar sil demektir.
+
+//             foreach (var item in myList)
+//             {
+//                 Console.WriteLine(item);
+//             }
+
+
+//             Console.WriteLine(myList.Contains(10));
+
+//             // Listenin içerisinde bir değer aramak istediğimiz zaman Contains değerini kullanırız.Sonucunda bize True False değer döndürür.
+
+//             ArrayList sayilar = new ArrayList(){10,5,4,60};
+            
+//             foreach (var item in sayilar)
+//             {
+//                 Console.WriteLine(item);
+//             }
+            
+//             sayilar.Sort();
+
+//             foreach (var item in sayilar)
+//             {
+//                 Console.WriteLine(item);
+//             }
+
+//         }
+//     }
+
+
+
 //         }
 //     }
 // }
