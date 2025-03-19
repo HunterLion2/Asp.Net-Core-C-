@@ -9,11 +9,10 @@ namespace ConsoleApp.DataAccess.Concrete {
         }
 
         public void Update(Product entity) {
-
+            Console.WriteLine("EFProduct - Create");
         }
 
         public void Create(Product entity) {
-            
         }
 
         public void Delete(int id) {
