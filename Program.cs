@@ -1134,40 +1134,72 @@
 
 // ----------------------------------------------------------------------- Hata Ve Hata Yönetimi ------------------------------------------------------------------------
 
-    class Product{
-        public string Name { get; set; }
-    }
+    // class Product{
+    //     public string Name { get; set; }
+    // }
 
-    class Program
-    {
-        static void Main(string[] args)
-        {           
-           // Bu şekilde sistemdeki hataları bir yere yazmış olduk.
+    // class Program
+    // {
+    //     static void Main(string[] args)
+    //     {           
+    //        // Bu şekilde sistemdeki hataları bir yere yazmış olduk.
 
-           // Exception 
-           // Unhandled exception. System.FormatException
-           // Unhandled exception. System.DivideByZeroException
-           // Unhandled exception. System.IndexOutOfRangeException
-           // Unhandled exception. System.NullReferenceException
+    //        // Exception 
+    //        // Unhandled exception. System.FormatException
+    //        // Unhandled exception. System.DivideByZeroException
+    //        // Unhandled exception. System.IndexOutOfRangeException
+    //        // Unhandled exception. System.NullReferenceException
 
-           Console.Write("1. sayı: ");
-           int sayi1 =int.Parse(Console.ReadLine());
+    //        Console.Write("1. sayı: ");
+    //        int sayi1 =int.Parse(Console.ReadLine());
 
-           Console.Write("2. sayı: ");
-           int sayi2 =int.Parse(Console.ReadLine());
+    //        Console.Write("2. sayı: ");
+    //        int sayi2 =int.Parse(Console.ReadLine());
 
-           var sonuc = sayi1 / sayi2;
+    //        var sonuc = sayi1 / sayi2;
 
-           int[] sayilar = new int[2];
-           // sayilar[2] = 10;
+    //        int[] sayilar = new int[2];
+    //        // sayilar[2] = 10;
 
-           Product p = null;
-           Console.WriteLine(p.Name);
+    //        Product p = null;
+    //        Console.WriteLine(p.Name);
 
-           // Exception Handling
+    //        // Exception Handling
            
+    //     }
+    // }
+
+// ---------------------------------------------------------------------- Hata Yakalama -----------------------------------------------------------------------------
+
+        try // Buranın İçerisine hatanın yakalanacağı kod satırı yazılır
+        {
+            Console.Write("a: ");
+            int a = int.Parse(Console.ReadLine());
+
+            Console.Write("b: ");
+            int b = int.Parse(Console.ReadLine());
+
+            var sonuc = a / b;
+
+            Console.WriteLine($"{0} / {1} = {2}",a,b,sonuc);
         }
-    }
+        catch (DivideByZeroException ex)  // Buraya çıkabilecek hata kodu yazılır. 
+        { // Buranın içerisine decatch de ki hata yakalandığı zaman yapılacak işlem yazılır.
+            Console.WriteLine("B sıgfır olamaz");
+            Console.WriteLine(ex.Message);
+        } 
+        catch(FormatException ex) {
+            Console.WriteLine("Sayısal bilgi girmelisiniz");
+            Console.WriteLine(ex.Message); // Bu da sistemin verdiği hata mesajını da yazdırır.
+        }
+        catch(Exception){ // Exception genel bütün hataları kapsar ve herhangi bir hata aldığı zaman aşşağıdaki kodu çalıştırır.
+            Console.WriteLine("Bir Hata Oluştu");
+        }
+
+        // Algoritmada çıkabilecek hataları öngererek hareket edip ona göre hata kodlarını yazmalıyız.
+
+
+
 
 //         }
 //     }
