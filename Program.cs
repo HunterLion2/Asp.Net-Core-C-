@@ -927,7 +927,6 @@
 // }
 
 // -------------------------------------------------------------------------- Array List -------------------------------------------------------------------------------
-
 // using System.Collections;
 
 // class Program
@@ -935,7 +934,7 @@
 //         static void Main(string[] args)
 //         {           
 //             // ArrayList
-            
+
 //             ArrayList myList = new ArrayList();
 
 //             myList.Add(10);
@@ -974,29 +973,170 @@
 //                 Console.WriteLine(item);
 //             }
 
-
 //             Console.WriteLine(myList.Contains(10));
 
 //             // Listenin içerisinde bir değer aramak istediğimiz zaman Contains değerini kullanırız.Sonucunda bize True False değer döndürür.
 
 //             ArrayList sayilar = new ArrayList(){10,5,4,60};
-            
+
 //             foreach (var item in sayilar)
 //             {
 //                 Console.WriteLine(item);
 //             }
-            
+
 //             sayilar.Sort();
 
 //             foreach (var item in sayilar)
 //             {
 //                 Console.WriteLine(item);
 //             }
-
 //         }
 //     }
 
+// using ConsoleApp.Entity;
 
+//     class Product
+//     {
+//         public string Name { get; set; }
+//     }
+//     class Program
+//     {
+
+        //ArrayList de istediğimiz türde değeri saklıyabiliyorken burada değerleri atmadan 
+        //önce hangi türde değer atanacağını belirtiriz sonrasında sadece o türe ait bilgileri atarız.
+
+        // static void Main(string[] args)
+        // {           
+        //     // Generic List
+        //     List<int> sayilar = new List<int>();
+        //     sayilar.Add(10);
+        //     sayilar.Add(20);
+        //     sayilar.Add(30);
+
+        //     List<string> isimler = new List<string>();
+        //     isimler.Add("ali");
+        //     isimler.Add("ahmet");
+        //     isimler.Add("yağmur");
+        //     isimler.Add(null);
+
+        //     List<Product> urunler1 = new List<Product>()
+        //     {
+        //         new Product(){Name="Samsung S6"},
+        //         new Product(){Name="Samsung S7"},
+        //         new Product(){Name="Samsung S8"},
+        //         new Product(){Name="Samsung S9"}
+        //     };
+
+        //     IList<Product> urunler2 = new List<Product>()
+        //     {
+        //         new Product(){Name="IPhone 6"},
+        //         new Product(){Name="IPhone 7"},
+        //         new Product(){Name="IPhone 8"},
+        //         new Product(){Name="IPhone 10"}
+        //     };
+
+            //AddRange metodu liste içine liste ekler. 
+
+            // urunler1.AddRange(urunler2);
+
+            // foreach (var sayi in sayilar)
+            // {
+            //     Console.WriteLine(sayi);
+            // }
+
+            // foreach (var product in urunler1)
+            // {
+            //     Console.WriteLine(product.Name);
+            // }
+
+            // urunler1.ForEach(p=> {
+            //         Console.WriteLine(p.Name);
+            // });
+
+
+            // Count ile listenin içindeki eleman sayısı gelir.
+            // int count = urunler1.Count;
+            // Console.WriteLine(count);
+
+            // Console.WriteLine(urunler2[0].Name);
+
+            // for (int i = 0; i < urunler2.Count; i++)
+            // {
+            //     Console.WriteLine(urunler2[i].Name);
+            // }
+
+            // insert items
+
+            // Insert metodunda ilk değerin girileceği yere hangi indexe değerin verileceği yazılır ikinci bölümede o seçilen indexe verilecek değer yazılır.
+            // sayilar.Insert(1,100);
+
+            // foreach (var sayi in sayilar)
+            // {
+            //     Console.WriteLine(sayi);
+            // }
+
+            // InsertRange metodu ise ilk değerinde girilecek değerin hangi indexe verileceğini yazarız ikinci indexe ise hangi listenin bu listeye ekleneceğini yazarız.
+            // urunler1.InsertRange(1,urunler2);
+
+            // for (int i = 0; i < urunler1.Count; i++)
+            // {
+            //     Console.WriteLine(urunler1[i].Name);   
+            // }
+
+    //         sayilar.RemoveAt(sayilar.Count-1);
+
+    //          foreach (var sayi in sayilar)
+    //         {
+    //             Console.WriteLine(sayi);
+    //         }
+
+    //     }
+    // }
+
+// ------------------------------------------------------------------------- Dictionary --------------------------------------------------------------------------------
+
+    // static void Main(string[] args) {
+
+    //     // Eğer bilgiyi key ve value değerleri şeklinde tanımlamak istersek buna başvurmamız gerekir.
+
+    //     Dictionary<int,string> plakalar = new Dictionary<int,string>();
+
+    //     plakalar.Add(34,"İstanbul");
+    //     plakalar.Add(35,"İzmir");
+    //     plakalar.Add(53,"Rize");
+
+    //     Dictionary<int,string> sayilar = new Dictionary<int, string> {
+    //         {1,"Bir"},
+    //         {2,"İki"},
+    //         {3,"Üç"}
+    //     };
+
+    //     Console.WriteLine(sayilar[1]); 
+
+    //     foreach (var plaka in plakalar)
+    //     {
+    //         Console.WriteLine($"{plaka.Key} {plaka.Value}");
+    //     }
+
+    //     for(int i = 0; i < plakalar.Count; i++) {
+    //         // ElementAt(i) bu method listenin içerisinden istediğimiz değeri çekebilmemizi sağlar.
+    //         // Burada Keys Ve Value yazma sebebimimiz Dictionary yapısını kullanmamızdandır.
+    //         Console.WriteLine($"{plakalar.Keys.ElementAt(i)} {plakalar[plakalar.Keys.ElementAt(i)]}");
+
+    //         // ContainsKey() bilgisi içine girilen değerin var olup olmadığını sonucunda true ya da false değer döndürerek bize söyler.
+    //         Console.WriteLine(plakalar.ContainsKey(34));
+
+    //         // Burada Remove() methodu içerisine girilen value değerini arar bulur varsa siler.
+    //         plakalar.Remove(34);
+    //         plakalar.Remove(35);
+    //     }
+    // }
+
+// ----------------------------------------------------------------------- Hata Ve Hata Yönetimi ------------------------------------------------------------------------
+
+    static void Main(string[] args) {
+        
+    }
 
 //         }
 //     }
