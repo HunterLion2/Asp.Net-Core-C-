@@ -189,59 +189,59 @@
 
 //                               ---------------------------------------------- Function(asd) -------------------------------------------------------
 
-    // class Islem
-    // {
-    //     // public int Toplama(int x, int y=0, int z=0)
-    //     // {
-    //     //     Console.WriteLine("x " + x);
-    //     //     Console.WriteLine("y " + y);
-    //     //     Console.WriteLine("z " + z);
+// class Islem
+// {
+//     // public int Toplama(int x, int y=0, int z=0)
+//     // {
+//     //     Console.WriteLine("x " + x);
+//     //     Console.WriteLine("y " + y);
+//     //     Console.WriteLine("z " + z);
 
-    //     //     return x + y + z;
-    //     // }
+//     //     return x + y + z;
+//     // }
 
-    //     public int Toplama(params int[] sayilar)
-    //     {
-    //         int toplam=0;
-    //         foreach (var sayi in sayilar)
-    //         {
-    //             toplam += sayi;
-    //         }
-    //         return toplam;
-    //     }
-    // }
+//     public int Toplama(params int[] sayilar)
+//     {
+//         int toplam=0;
+//         foreach (var sayi in sayilar)
+//         {
+//             toplam += sayi;
+//         }
+//         return toplam;
+//     }
+// }
 
-    // class Program
-    // {
-    //     static void Main(string[] args)
-    //     {
-    //         var islem = new Islem();
+// class Program
+// {
+//     static void Main(string[] args)
+//     {
+//         var islem = new Islem();
 
-    //         // Console.WriteLine(islem.Toplama(10, 20, 30));
-    //         // Console.WriteLine(islem.Toplama(y: 20, z: 30, x: 10)); // Named 
-    //         // Console.WriteLine(islem.Toplama(10,20)); // default 
-    //         Console.WriteLine(islem.Toplama(10)); 
-    //         Console.WriteLine(islem.Toplama(10,20)); 
-    //         Console.WriteLine(islem.Toplama(10,20,30)); 
-    //         Console.WriteLine(islem.Toplama(10,20,30,40)); 
+//         // Console.WriteLine(islem.Toplama(10, 20, 30));
+//         // Console.WriteLine(islem.Toplama(y: 20, z: 30, x: 10)); // Named 
+//         // Console.WriteLine(islem.Toplama(10,20)); // default 
+//         Console.WriteLine(islem.Toplama(10)); 
+//         Console.WriteLine(islem.Toplama(10,20)); 
+//         Console.WriteLine(islem.Toplama(10,20,30)); 
+//         Console.WriteLine(islem.Toplama(10,20,30,40)); 
 
 // ------------------------------------------------ Function() Aşırı Yükleme Mantığı -----------------------------------------------------------
 
-        // Bu şekilde bir function'un birden fazla halde metodu olanları yazılırsa biz bu function'lardan istediğimizi seçip çalışabiliriz.
+// Bu şekilde bir function'un birden fazla halde metodu olanları yazılırsa biz bu function'lardan istediğimizi seçip çalışabiliriz.
 
-        // public int Toplama(int a, int b)
-        // {
-        //     return a + b;
-        // }
-        // public int Toplama(int a, int b, int c)
-        // {
-        //     return a + b + c;
-        // }
+// public int Toplama(int a, int b)
+// {
+//     return a + b;
+// }
+// public int Toplama(int a, int b, int c)
+// {
+//     return a + b + c;
+// }
 
-        // public int Toplama(int a, int b, int c, int d)
-        // {
-        //     return a + b + c + d;
-        // }
+// public int Toplama(int a, int b, int c, int d)
+// {
+//     return a + b + c + d;
+// }
 
 // ----------------------------------------------------------- Constructor ------------------------------------------------------------------
 
@@ -309,7 +309,7 @@
 //             Console.WriteLine(p2.Comments[0].Text);       
 
 //             Console.WriteLine("*********************");
-            
+
 //             var p3 = new Product(1231,"samsung s7",3000,true);
 
 //             Console.WriteLine(p3.ProductId);            
@@ -325,193 +325,193 @@
 
 // ---------------------------------------------------------------- Genel Uygulama ---------------------------------------------------------------------------
 
-    // class Question
-    // {
-    //     public Question(string text, string[] choices, string answer)
-    //     {
-    //         this.Text = text;
-    //         this.Choices = choices;
-    //         this.Answer = answer;
-    //     }
-    //     public string Text { get; set; }
-    //     public string[] Choices { get; set; }
-    //     public string Answer { get; set; }
+// class Question
+// {
+//     public Question(string text, string[] choices, string answer)
+//     {
+//         this.Text = text;
+//         this.Choices = choices;
+//         this.Answer = answer;
+//     }
+//     public string Text { get; set; }
+//     public string[] Choices { get; set; }
+//     public string Answer { get; set; }
 
-    //     public bool checkAnswer(string answer)
-    //     {
-    //         return this.Answer.ToLower() == answer.ToLower();
-    //     }
-    // }
+//     public bool checkAnswer(string answer)
+//     {
+//         return this.Answer.ToLower() == answer.ToLower();
+//     }
+// }
 
-    // class Quiz
-    // {
-    //     public Quiz(Question[] questions)
-    //     {
-    //         this.Questions = questions;
-    //         this.QuestionIndex = 0;
-    //         this.Score = 0;
-    //     }
-    //     private Question[] Questions { get; set; }
-    //     private int QuestionIndex { get; set; }
-    //     private int Score { get; set; }
+// class Quiz
+// {
+//     public Quiz(Question[] questions)
+//     {
+//         this.Questions = questions;
+//         this.QuestionIndex = 0;
+//         this.Score = 0;
+//     }
+//     private Question[] Questions { get; set; }
+//     private int QuestionIndex { get; set; }
+//     private int Score { get; set; }
 
-    //     private Question GetQuestion()
-    //     {
-    //         return this.Questions[this.QuestionIndex];
-    //     }
+//     private Question GetQuestion()
+//     {
+//         return this.Questions[this.QuestionIndex];
+//     }
 
-    //     public void DisplayQuestion()
-    //     {
-    //         var question = this.GetQuestion();
-    //         this.DisplayProgress();
-    //         Console.WriteLine($"soru {this.QuestionIndex + 1}: {question.Text}");
+//     public void DisplayQuestion()
+//     {
+//         var question = this.GetQuestion();
+//         this.DisplayProgress();
+//         Console.WriteLine($"soru {this.QuestionIndex + 1}: {question.Text}");
 
-    //         foreach (var c in question.Choices)
-    //         {
-    //             Console.WriteLine($"-{c}");
-    //         }
+//         foreach (var c in question.Choices)
+//         {
+//             Console.WriteLine($"-{c}");
+//         }
 
-    //         Console.Write("cevap: ");
-    //         var cevap = Console.ReadLine();
-    //         this.Guess(cevap);
-    //     }
+//         Console.Write("cevap: ");
+//         var cevap = Console.ReadLine();
+//         this.Guess(cevap);
+//     }
 
-    //     private void Guess(string answer)
-    //     {
-    //         var question = this.GetQuestion();
-    //         if (question.checkAnswer(answer))
-    //             this.Score++;
-    //         this.QuestionIndex++;
+//     private void Guess(string answer)
+//     {
+//         var question = this.GetQuestion();
+//         if (question.checkAnswer(answer))
+//             this.Score++;
+//         this.QuestionIndex++;
 
-    //         if (this.Questions.Length == this.QuestionIndex)
-    //         {
-    //             this.DisplayScore();
-    //         }
-    //         else
-    //         {                
-    //             this.DisplayQuestion();
-    //         }
+//         if (this.Questions.Length == this.QuestionIndex)
+//         {
+//             this.DisplayScore();
+//         }
+//         else
+//         {                
+//             this.DisplayQuestion();
+//         }
 
-    //     }
-    //     private void DisplayScore()
-    //     {
-    //         Console.WriteLine($"Score: {this.Score}");
-    //     }
+//     }
+//     private void DisplayScore()
+//     {
+//         Console.WriteLine($"Score: {this.Score}");
+//     }
 
-    //     private void DisplayProgress()
-    //     {
-    //         int totalQuestion = this.Questions.Length;
-    //         int questionNumber = this.QuestionIndex+1;
+//     private void DisplayProgress()
+//     {
+//         int totalQuestion = this.Questions.Length;
+//         int questionNumber = this.QuestionIndex+1;
 
-    //         if (totalQuestion>=questionNumber)
-    //             Console.WriteLine($"Question {questionNumber} of {totalQuestion}");
-    //     }
+//         if (totalQuestion>=questionNumber)
+//             Console.WriteLine($"Question {questionNumber} of {totalQuestion}");
+//     }
 
-    // }
+// }
 
-    // class Program
-    // {
-    //     static void Main(string[] args)
-    //     {
-    //         // OOP: Quiz Uygulaması
+// class Program
+// {
+//     static void Main(string[] args)
+//     {
+//         // OOP: Quiz Uygulaması
 
-    //         var q1 = new Question("En iyi programlama dili hangisidir?", new string[] { "Python", "C#", "Java", "C++" }, "C#");
-    //         var q2 = new Question("En popüler programlama dili hangisidir?", new string[] { "C#", "Python", "Java", "C++" }, "C#");
-    //         var q3 = new Question("En çok kazandıran programlama dili hangisidir?", new string[] { "C#", "Java", "Python", "C++" }, "C#");
+//         var q1 = new Question("En iyi programlama dili hangisidir?", new string[] { "Python", "C#", "Java", "C++" }, "C#");
+//         var q2 = new Question("En popüler programlama dili hangisidir?", new string[] { "C#", "Python", "Java", "C++" }, "C#");
+//         var q3 = new Question("En çok kazandıran programlama dili hangisidir?", new string[] { "C#", "Java", "Python", "C++" }, "C#");
 
-    //         var questions = new Question[] { q1, q2, q3 };
-    //         var quiz = new Quiz(questions);
+//         var questions = new Question[] { q1, q2, q3 };
+//         var quiz = new Quiz(questions);
 
-    //         quiz.DisplayQuestion();
+//         quiz.DisplayQuestion();
 
-    //     }
-    // }
+//     }
+// }
 
 // --------------------------------------------------------- Static Members ------------------------------------------------------------------
 
-    // class Product
-    //     // Bu alanda saklamak istediğimiz bilgiler bulunur.
-    //     {
-    //         public int ProductId { get; set; }
-    //         public string ProductName { get; set; }
-    //         public double Price { get; set; }
-    //         public bool IsApproved { get; set; }
-    //     }
+// class Product
+//     // Bu alanda saklamak istediğimiz bilgiler bulunur.
+//     {
+//         public int ProductId { get; set; }
+//         public string ProductName { get; set; }
+//         public double Price { get; set; }
+//         public bool IsApproved { get; set; }
+//     }
 
-    // static class ProductManager
-    // {
-    //     static Product[] Products;
+// static class ProductManager
+// {
+//     static Product[] Products;
 
-    //     static ProductManager()
-    //     {
-    //         Products = new Product[5];
+//     static ProductManager()
+//     {
+//         Products = new Product[5];
 
-    //         Products[0] = new Product { ProductId = 1, ProductName = "Iphone 5", Price = 2000, IsApproved = false };
-    //         Products[1] = new Product { ProductId = 2, ProductName = "Iphone 6", Price = 3000, IsApproved = false };
-    //         Products[2] = new Product { ProductId = 3, ProductName = "Iphone 7", Price = 4000, IsApproved = true };
-    //         Products[3] = new Product { ProductId = 4, ProductName = "Iphone 8", Price = 5000, IsApproved = true };
-    //         Products[4] = new Product { ProductId = 5, ProductName = "Iphone X", Price = 6000, IsApproved = true };
-    //     }
+//         Products[0] = new Product { ProductId = 1, ProductName = "Iphone 5", Price = 2000, IsApproved = false };
+//         Products[1] = new Product { ProductId = 2, ProductName = "Iphone 6", Price = 3000, IsApproved = false };
+//         Products[2] = new Product { ProductId = 3, ProductName = "Iphone 7", Price = 4000, IsApproved = true };
+//         Products[3] = new Product { ProductId = 4, ProductName = "Iphone 8", Price = 5000, IsApproved = true };
+//         Products[4] = new Product { ProductId = 5, ProductName = "Iphone X", Price = 6000, IsApproved = true };
+//     }
 
-    //     public static Product[] GetProducts()
-    //     {
-    //         return Products;
-    //     }
+//     public static Product[] GetProducts()
+//     {
+//         return Products;
+//     }
 
-    //     public static Product GetProductById(int id)
-    //     {
-    //         Product product = null;
+//     public static Product GetProductById(int id)
+//     {
+//         Product product = null;
 
-    //         foreach (var p in Products)
-    //         {
-    //             if (p.ProductId == id)
-    //             {
-    //                 product = p;
-    //                 break;
-    //             }
-    //         }
+//         foreach (var p in Products)
+//         {
+//             if (p.ProductId == id)
+//             {
+//                 product = p;
+//                 break;
+//             }
+//         }
 
-    //         return product;
-    //     }
+//         return product;
+//     }
 
-    //     public static Product GetProductByName(string name) { 
-    //         Product product = null;
+//     public static Product GetProductByName(string name) { 
+//         Product product = null;
 
-    //         foreach (var p in Products)
-    //         {
-    //             if (p.ProductName == name){
-    //                 product = p;
-    //                 break;
-    //             } 
-    //         }
+//         foreach (var p in Products)
+//         {
+//             if (p.ProductName == name){
+//                 product = p;
+//                 break;
+//             } 
+//         }
 
-    //         if(product == null ) {
-    //             Console.WriteLine("Verdiğiniz Değer Bulunmamaktadır");
-    //         }
+//         if(product == null ) {
+//             Console.WriteLine("Verdiğiniz Değer Bulunmamaktadır");
+//         }
 
-    //         return product;
-    //     }
-    // }
+//         return product;
+//     }
+// }
 
-    // class Program {
-    //     static void Main(string[] args) {
-    //         // var product = ProductManager.GetProductById(2);
-    //         // Console.WriteLine($"name: {product.ProductName} price: {product.Price}");
+// class Program {
+//     static void Main(string[] args) {
+//         // var product = ProductManager.GetProductById(2);
+//         // Console.WriteLine($"name: {product.ProductName} price: {product.Price}");
 
-    //         // var products = ProductManager.GetProducts();
-    //         //    foreach (var p in products)
-    //         //    {
-    //         //        Console.WriteLine($"name: {p.ProductName} price: {p.Price}");
-    //         //    }
+//         // var products = ProductManager.GetProducts();
+//         //    foreach (var p in products)
+//         //    {
+//         //        Console.WriteLine($"name: {p.ProductName} price: {p.Price}");
+//         //    }
 
-    //         Console.Write("Aratmak İstediğiniz Değerin Adını Giriniz: ");
-    //         string result = Console.ReadLine();
+//         Console.Write("Aratmak İstediğiniz Değerin Adını Giriniz: ");
+//         string result = Console.ReadLine();
 
-    //         var product = ProductManager.GetProductByName(result);
-    //         Console.WriteLine($"name: {product.ProductName} price: {product.Price}");
+//         var product = ProductManager.GetProductByName(result);
+//         Console.WriteLine($"name: {product.ProductName} price: {product.Price}");
 
-    //     }
-    // }
+//     }
+// }
 
 // --------------------------------------------------------------- Repository (Genel Uygulama) -----------------------------------------------------------------------------
 
@@ -599,3 +599,94 @@
 
 //         }
 //     }
+
+
+// ------------------------------------------------------------------------- Hata Yönetimi ------------------------------------------------------------------------------
+// class Uygulama1 {
+
+//     static void Main(string[] args) {
+
+//         var liste = new List<String>() {
+//             "1","2","5a","abc","10","50"
+//         };
+
+//         foreach (var list in liste){
+
+//             try
+//             {
+//                 int a = int.Parse(list);
+
+//                 Console.WriteLine(a);
+//             }
+//             catch (System.FormatException)
+//             {
+//                 // Console.WriteLine("Listenin içerisinde sayı olmayan değerler bulunmaktadır");
+//                 continue;
+//             }
+//         }
+//     }
+// }
+
+// class Uygulama2
+// {
+//     static void Main(string[] args)
+//     {
+//         while (true)
+//         {
+//             Console.Write("Değer Giriniz: ");
+//             string result = Console.ReadLine();
+
+//             if(result == "q") {
+//                 Console.WriteLine("Çıkış Yapılmıştır.");
+//                 break;
+//             }
+
+//             try
+//             {
+//                 int sayi = int.Parse(result);
+//                 Console.WriteLine(sayi);
+//             }
+//             catch (Exception)
+//             {
+//                 Console.WriteLine("Girdiğiniz Değer Hatalıdır.");
+//                 continue;
+//             }
+
+//         }
+
+//     }
+// }
+
+// class Uygulama3 {
+
+//     static void Main(string[] args) {
+
+//         Console.WriteLine("Parola Giriniz: ");
+//         string password = Console.ReadLine();
+
+//         try
+//         {
+//             CheckPassword(password);            
+//         }
+//         catch (Exception ex)
+//         {
+//             Console.Write(ex.Message);
+//         }
+//     }
+
+//     static void CheckPassword(string parola) {
+//         string TürkceKarakterler = "ğ,Ğ,ç,Ç,ş,Ş,ü,Ü,ö,Ö,ı,İ";
+
+//         foreach (var item in TürkceKarakterler)
+//         {
+//             // Burada IndexOf(item) > -1 den büyük yazdık çünkü IndexOf değeri söylediğimiz değerleri bulursa -1 döndürüyor
+//             if(parola.IndexOf(item) > -1) {
+//                 throw new Exception("Parola türkçe karakter içeremez");                
+//             }
+//         }
+//         Console.Write("geçerli parola");
+
+//     }
+// }
+
+
