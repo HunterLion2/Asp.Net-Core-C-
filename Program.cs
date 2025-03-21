@@ -1171,34 +1171,92 @@
 
 // ---------------------------------------------------------------------- Hata Yakalama -----------------------------------------------------------------------------
 
-        try // Buranın İçerisine hatanın yakalanacağı kod satırı yazılır
-        {
-            Console.Write("a: ");
-            int a = int.Parse(Console.ReadLine());
+        // try // Buranın İçerisine hatanın yakalanacağı kod satırı yazılır
+        // {
+        //     Console.Write("a: ");
+        //     int a = int.Parse(Console.ReadLine());
 
-            Console.Write("b: ");
-            int b = int.Parse(Console.ReadLine());
+        //     Console.Write("b: ");
+        //     int b = int.Parse(Console.ReadLine());
 
-            var sonuc = a / b;
+        //     var sonuc = a / b;
 
-            Console.WriteLine($"{0} / {1} = {2}",a,b,sonuc);
-        }
-        catch (DivideByZeroException ex)  // Buraya çıkabilecek hata kodu yazılır. 
-        { // Buranın içerisine decatch de ki hata yakalandığı zaman yapılacak işlem yazılır.
-            Console.WriteLine("B sıgfır olamaz");
-            Console.WriteLine(ex.Message);
-        } 
-        catch(FormatException ex) {
-            Console.WriteLine("Sayısal bilgi girmelisiniz");
-            Console.WriteLine(ex.Message); // Bu da sistemin verdiği hata mesajını da yazdırır.
-        }
-        catch(Exception){ // Exception genel bütün hataları kapsar ve herhangi bir hata aldığı zaman aşşağıdaki kodu çalıştırır.
-            Console.WriteLine("Bir Hata Oluştu");
-        }
+        //     Console.WriteLine($"{0} / {1} = {2}",a,b,sonuc);
+        // }
+        // catch (DivideByZeroException ex)  // Buraya çıkabilecek hata kodu yazılır. 
+        // { // Buranın içerisine decatch de ki hata yakalandığı zaman yapılacak işlem yazılır.
+        //     Console.WriteLine("B sıgfır olamaz");
+        //     Console.WriteLine(ex.Message);
+        // } 
+        // catch(FormatException ex) {
+        //     Console.WriteLine("Sayısal bilgi girmelisiniz");
+        //     Console.WriteLine(ex.Message); // Bu da sistemin verdiği hata mesajını da yazdırır.
+        // }
+        // catch(Exception){ // Exception genel bütün hataları kapsar ve herhangi bir hata aldığı zaman aşşağıdaki kodu çalıştırır.
+        //     Console.WriteLine("Bir Hata Oluştu");
+        // }
 
         // Algoritmada çıkabilecek hataları öngererek hareket edip ona göre hata kodlarını yazmalıyız.
 
+// ------------------------------------------------------------------ Hata Fırlatma ------------------------------------------------------------------------------------
 
+    // class Person
+    // {
+    //     string _name;
+    //     public string Name
+    //     {
+    //         get {
+    //             return _name;
+    //         }
+    //         set { // Burada set methodu ile kullanıcının girdiği değeri kontrol ederiz.
+    //             if(value.Length>15) // Bu şekilde de hata fırlatabiliriz.
+    //                 throw new Exception("Name için en fazla 15 karakter girmelisiniz.");
+    //             _name = value;
+    //         }
+    //     }
+    // }
+    // class Program
+    // {
+    //     static void check_password(string password)
+    //     {
+    //         if (password.Length<8 || password.Length>15)
+    //             throw new Exception("Parola 7-15 karakter arasında olmalıdır.");
+    //         if (!password.Any(char.IsDigit)) // Any methodu ile password içerisindeki her bir kelimeyi kontrol edebiliriz.
+    //         // IsDigit değeri password içerisindeki her bir kelimenin rakam olup olmadığına bakar.
+    //             throw new Exception("Parola en az bir rakam içermelidir.");
+    //         if (!password.Any(char.IsLetter)) // IsLetter değeri ise girilen değerin harf olup olmadığına bakar.
+    //             throw new Exception("Parola en az bir harf içermelidir");
+    //     }
+
+        // static void Main(string[] args)
+        // {
+            // Exception Handling
+
+            // string parola = "12345222s";
+
+            // try
+            // {
+            //     check_password(parola);
+            //     Console.WriteLine("parola geçerli.");
+            // }
+            // catch (Exception ex) Biz burada aslında yukarıda oluşturduğumuz Exception değerlerini yakalarız
+            // {
+            //     Console.WriteLine(ex.Message);
+            // }
+
+    //         try
+    //         {
+    //             var p = new Person();
+    //             p.Name = "Sadık    ";
+    //         }
+    //         catch (System.Exception ex)
+    //         {
+    //             Console.WriteLine(ex.Message);
+    //         }
+    //     }
+    // }
+
+    
 
 
 //         }
